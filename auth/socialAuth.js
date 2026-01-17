@@ -2,14 +2,15 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA9hIM7sdXTbn72kkuCTCE8v89zUkvRdis",
-  authDomain: "codecatalystunivproject.firebaseapp.com",
-  projectId: "codecatalystunivproject",
-  storageBucket: "codecatalystunivproject.firebasestorage.app",
-  messagingSenderId: "164849801735",
-  appId: "1:164849801735:web:51a1645b4df434be5b68a2",
-  measurementId: "G-C45V0090H6",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
+
 
 // Inisialisasi Firebase app & auth (modular SDK v9)
 const app = initializeApp(firebaseConfig);
